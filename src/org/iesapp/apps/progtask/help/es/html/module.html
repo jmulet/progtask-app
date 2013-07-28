@@ -1,0 +1,53 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+<!-- * Copyright � 1997, 2011, Oracle and/or its affiliates. All rights reserved. * Use is subject to license terms. > -->
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8">
+  <title>Programador de tasques</title>
+</head>
+<body>
+<h2>Programador de tasques</h2>
+
+<span>Les tasques programades s'han d'especificar
+dins la taula de la base de fitxes anomenada
+`sig_progtasques´. Depenent del camp tipo,
+s'executen les diferentes tasques. Aquests són
+els camps suportats.</span>
+
+<ul>
+    <li> IMPORTSGD-FITXES<br>
+ importa els valors globals de faltes,
+ amonestacions i retards de la base SGD
+ a les fitxes de cada alumne. És convenient
+ que es faci un update diari.
+    </li>
+    <li>PRESENCIA<br>
+ comprova si el professor que no ha signat
+ ha tret la PDA. Si dia=0; executa la tasca 
+ tots els dies laborables descomptant festius.
+ </li>
+ <li>BACKUP<br>
+ Fa un mysqldump de la base de fitxes. Els
+ parametres de configuracio estan a 
+config\progtask.ini
+ </li>
+ <li>BACKUPSGD<br>
+ Fa un mysqldump de la base del SGD. Els
+ parametres de configuracio estan a 
+config\progtask.ini
+ </li>
+ <li>LLEU2HIST<br>
+ Converteix 5AL en 5ALH + 1 AG per acumulació.
+ Si hi ha incostitències no fa la conversio
+ i insta a l'usuari que faci un check manualment.
+ Veure al sig_log
+ </li>
+ <li>REMAINDERS<br>
+ Si la missatgeria està activada reenvia el missatge
+ al professor que no hagi contestat quan la data s'apropa
+ a la data d'entrevista del tutor amb la família.
+ </li>
+</ul>
+
+</body>
+</html>
